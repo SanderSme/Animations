@@ -1,20 +1,80 @@
-.ball {
-  animation-name: slide;
-  animation-duration: 5s;
-  position: relative;
-  top: 300px;
-  height: 50px;
-  width: 50px;
-  background: red;
-  border-radius: 50%;
+/*
+animation-name: ;
+-name to be used in the @keyframe
+
+animation-duration: ;
+-how long the animation should run
+
+animation-iteration-count: ;
+-how many times the animation should happen/run
+
+animation-fill-mode: ;
+-what styles should apply befor/after animation has run
+
+animation-delay: ;
+-the delay before the animation starts
+
+animation-timing-function: ;
+-manages acceleration in the animation
+
+animation-direction: ;
+-the direction the animation should run in. It can be reversed
+*/
+
+:root {
+  --black: #000;
+  --blue: blue;
+  --green: green;
+  --white: #fff;
+  --base-font-size: 3rem;
+  --base-padding: 1em;
 }
 
-@keyframes slide {
+h1 {
+  margin-bottom: 0;
+  color: var(--blue);
+  font-size: var(--base-font-size);
+  padding: var(--base-padding);
+}
+
+h2 {
+  margin-bottom: 0;
+  color: var(--green);
+  font-size: var(--base-font-size);
+  padding: var(--base-padding);
+}
+
+h3 {
+  margin-bottom: 0;
+  font-size: var(--base-font-size);
+  padding: var(--base-padding);
+}
+
+.ball {
+  position: relative;
+  top: 200px;
+  left: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: lightcoral;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  animation-name: mybounce;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.loop-it {
+  animation-iteration-count: infinite;
+}
+
+@keyframes mybounce {
   0% {
     top: 300px;
   }
   50% {
-    top: 0px;
+    top: 0;
   }
   100% {
     top: 300px;
